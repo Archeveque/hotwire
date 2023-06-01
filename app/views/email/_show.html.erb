@@ -1,7 +1,9 @@
 <div id="destroy" class="card mb-3">
   <div class="card-header"><h3 ><%= email.object %></h3></div>
-  <div class="card-body"><p ><%= email.body %></p></div>
-  <div class="btn-group mb-7">
-  <%= link_to "Supprimer", "#{@email.id}/destroy", data: { turbo_link: "post" } %>
-</div>
+    <div class="card-body"><p ><%= email.body %></p></div>
+      <div class="btn-group mb-7">
+        <%= link_to "Supprimer", "#{@email.id}/destroy", data: { turbo_link: "post" } %>
+      </div>
+    </div>
+  </div>
 </div>
