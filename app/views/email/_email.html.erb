@@ -1,19 +1,18 @@
 <div class='container'>
     <table >
         <% Email.all.each do |email| %>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body ">
-                
+            <div class="card-body ">   
                 <div class="mail_list">
-                    <div id="<%= email.id %>" class="card text-white mb-3 <%= email.read == true ? "read border-success" : "border-warning" %>" >
-                        <%= link_to(raw("<p>Objet : #{email.object} </br></br> #{email.body} </p>"),"#{email.id}", remote: true)%>
-                    </div>
-                    <th><h6 class="card-subtitle mb-2 text-muted"><%=email.updated_at%></h6></th>
-                    <th><h6 class="card-subtitle mb-2 text-muted"><%=email.object%></h6></th>
-                    <th><h6 class="card-subtitle mb-2 text-muted"><%=email.body%></h6></th>
-                    <th><p class="card-text"><%=email.read%></p></th>
-                </div>
-                
+                    <tr>
+                        <div id="<%= email.id %>" class="card text-white mb-3 <%= email.read == true ? "read border-success" : "border-warning" %>" >
+                            <%= link_to(raw("<p>Objet : #{email.object} </br></br> #{email.body} </p>"),"email/#{email.id}", remote: true)%>
+                        </div>
+                        <th><h6 class="card-subtitle mb-2 text-muted"><%=email.updated_at%></h6></th>
+                        <th><h6 class="card-subtitle mb-2 text-muted"><%=email.object%></h6></th>
+                        <th><h6 class="card-subtitle mb-2 text-muted"><%=email.body%></h6></th>
+                        <th><p class="card-text"><%=email.read%></p></th>
+                    </tr>
+                </div> 
             </div>
         </div>
         <%end%>
