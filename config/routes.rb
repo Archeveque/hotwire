@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'email/:email_id', to: 'email#show'
   get 'email/:email_id/destroy', to: 'email#destroy'
   post 'email/:email_id/destroy', to: 'email#destroy'
+  root 'email#index'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
