@@ -1,4 +1,4 @@
-<%= link_to "Créer un mail", "create", data: { turbo_link: "post" } %>
+<%= link_to "Créer un mail", "/email/create", data: { turbo_link: "post" } %>
 
-<%=link_to "inverser les lu/non lu", "change",data: { turbo_link: "get" }%>
+<%=link_to "inverser les lu/non lu", "/email/change",data: { turbo_link: "get" }%>
 <%= render 'email'%>
